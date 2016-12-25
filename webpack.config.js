@@ -5,7 +5,7 @@ module.exports = {
   entry: [
         'webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:8080',
-        path.resolve(__dirname, 'app/app.js')
+        path.resolve(__dirname, 'src/app.js')
     ],
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -32,6 +32,10 @@ module.exports = {
                 loader: "style-loader!css-loader"
             },
             {
+                test: /\.scss$/,
+                loader: 'style!css!sass'
+            },
+            {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'url-loader?limit=10000&name=images/[hash:base64:8].[ext]'
             },
@@ -44,10 +48,11 @@ module.exports = {
     //别名，例如　：　require('elements/logo/component')//等价于public/js/elements/logo/component
     resolve: {
         alias: {
-            component: __dirname + '/app/component'
+            components: __dirname + '/src/components',
+            images: __dirname + '/src/images'
         },
         //后缀自动补全功能
-        extensions: ['', '.js', '.jsx', '.json', '.css', '.png', '.jpg']
+        extensions: ['', '.js', '.jsx', '.json', '.css', 'scss', '.png', '.jpg']
     },
     eslint: {
         configFile: './.eslintrc'
