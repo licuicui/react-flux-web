@@ -23,6 +23,11 @@ module.exports = {
 
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader'
+            },
+            {
                 test: /\.css$/,
                 loader: "style-loader!css-loader"
             },
@@ -43,6 +48,9 @@ module.exports = {
         },
         //后缀自动补全功能
         extensions: ['', '.js', '.jsx', '.json', '.css', '.png', '.jpg']
+    },
+    eslint: {
+        configFile: './.eslintrc'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
