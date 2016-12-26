@@ -18,7 +18,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'react','stage-0']
                 }
 
             },
@@ -29,11 +29,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader"
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.scss$/,
-                loader: 'style!css!sass'
+                loader: 'style-loader!css-loader!sass-loader'
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -48,8 +48,10 @@ module.exports = {
     //别名，例如　：　require('elements/logo/component')//等价于public/js/elements/logo/component
     resolve: {
         alias: {
-            components: __dirname + '/src/components',
-            images: __dirname + '/src/images'
+            Login: __dirname + '/src/login',
+            SupplierComponents: __dirname + '/src/supplier/components',
+            Images: __dirname + '/src/images',
+            Style: __dirname + '/src/style'
         },
         //后缀自动补全功能
         extensions: ['', '.js', '.jsx', '.json', '.css', 'scss', '.png', '.jpg']
