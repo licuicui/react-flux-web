@@ -49,9 +49,15 @@ module.exports = {
     resolve: {
         alias: {
             Login: __dirname + '/src/login',
-            SupplierComponents: __dirname + '/src/supplier/components',
             Images: __dirname + '/src/images',
-            Style: __dirname + '/src/style'
+            Style: __dirname + '/src/style',
+            Util: __dirname + '/util',
+            SupplierComponents: __dirname + '/src/supplier/components',
+            SupplierConstants: __dirname + '/src/supplier/constants',
+            SupplierActions: __dirname + '/src/supplier/actions',
+            ClientComponents: __dirname + '/src/client/components',
+            ClientConstants: __dirname + '/src/client/constants',
+            ClientActions: __dirname + '/src/client/actions'
         },
         //后缀自动补全功能
         extensions: ['', '.js', '.jsx', '.json', '.css', 'scss', '.png', '.jpg']

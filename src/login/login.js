@@ -6,6 +6,9 @@ import LOGINLOGO from 'Images/loginLogo.png'
 /* Components */
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd'
 const FormItem = Form.Item
+/* Actions */
+import SellerUserAction from 'SupplierActions/useAction'
+import BuyerUserAction from 'SupplierActions/useAction'
 
 class Login extends Component {
 
@@ -23,12 +26,21 @@ class Login extends Component {
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
+    const type = this.state.type
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        if (type === 'seller') {
+          SellerUserAction.login(values, (data) => {
+            message.error(data)
+          })
+        } else if (type === 'buyer') {
+          BuyerUserAction.login(values, (data) => {
+            message.error(data)
+          })
+        }
       }
-    });
+    })
   }
 
   render () {
@@ -51,7 +63,7 @@ class Login extends Component {
             </div>
             <Form className='login-form'>
               <FormItem>
-                {getFieldDecorator('userName', {
+                {getFieldDecorator('username', {
                   rules: [ { required: true, message: '用户名不能为空' } ],
                 })(
                   <Input addonBefore={<Icon type='user' />} placeholder='请输入用户名' />
