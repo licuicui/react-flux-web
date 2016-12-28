@@ -52,6 +52,7 @@ module.exports = {
             Images: __dirname + '/src/images',
             Style: __dirname + '/src/style',
             Util: __dirname + '/util',
+            Public: __dirname + '/src/public',
             SupplierComponents: __dirname + '/src/supplier/components',
             SupplierConstants: __dirname + '/src/supplier/constants',
             SupplierActions: __dirname + '/src/supplier/actions',

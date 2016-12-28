@@ -6,6 +6,26 @@ body,html{
 }
 
 #app {
-  min-height: 100%;
-  position: relative;
+  font-size: 14px;
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+  line-height: 0;
 }

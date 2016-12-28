@@ -1,13 +1,11 @@
 /* Libs */
 import React, { Component } from 'react'
-/* Images */
-import LOGINBG from 'Images/loginBg.png'
 import LOGINLOGO from 'Images/loginLogo.png'
 /* Components */
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd'
 const FormItem = Form.Item
 /* Actions */
-import UserAction from 'SupplierActions/useAction'
+import UserAction from 'ClientActions/useAction'
 
 class Home extends Component {
 
@@ -18,7 +16,7 @@ class Home extends Component {
 
   render () {
     return (
-      <div>seller</div>
+      <div>client</div>
     )
   }
 

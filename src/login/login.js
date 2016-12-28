@@ -48,7 +48,7 @@ class Login extends Component {
     const type = this.state.type
     return (
       <div className='login'>
-        <div className='content'>
+        <div className='login-content'>
           <div className='login-header'>
             <div className='logo'>
                 <img src={LOGINLOGO} alt='logo' />
