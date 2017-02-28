@@ -36,6 +36,10 @@ module.exports = {
                 loader: 'style-loader!css-loader!sass-loader'
             },
             {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+            {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'url-loader?limit=10000&name=images/[hash:base64:8].[ext]'
             },
@@ -48,17 +52,15 @@ module.exports = {
     //别名，例如　：　require('elements/logo/component')//等价于public/js/elements/logo/component
     resolve: {
         alias: {
-            Login: __dirname + '/src/login',
             Images: __dirname + '/src/images',
             Style: __dirname + '/src/style',
             Util: __dirname + '/util',
             Public: __dirname + '/src/public',
-            SupplierComponents: __dirname + '/src/supplier/components',
-            SupplierConstants: __dirname + '/src/supplier/constants',
-            SupplierActions: __dirname + '/src/supplier/actions',
-            ClientComponents: __dirname + '/src/client/components',
-            ClientConstants: __dirname + '/src/client/constants',
-            ClientActions: __dirname + '/src/client/actions'
+            SysConfig: __dirname + '/sysConfig',
+            Plugin: __dirname + '/plugin',
+            Actions: __dirname + '/src/actions',
+            Components: __dirname + '/src/components',
+            Dispatcher: __dirname + '/src/dispatcher',
         },
         //后缀自动补全功能
         extensions: ['', '.js', '.jsx', '.json', '.css', 'scss', '.png', '.jpg']

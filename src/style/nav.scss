@@ -18,7 +18,7 @@
             float: left;
             width: 120px;
             height: 100%;
-            opacity: 0.8;
+            font-size: 12px;
         }
 
         &logo {
@@ -73,7 +73,7 @@
             }
 
             .#{$secNav}item-active {
-                background: #ebebeb;
+                background: rgba(71,184,224,0.3);
             }
         }
     }

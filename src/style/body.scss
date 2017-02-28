@@ -12,6 +12,7 @@ $borderColor: #dbdbdb;
 
 #main {
   height: 100%;
+  margin-left: 120px;
 }
 
 button.login-info-menu {
@@ -34,7 +35,7 @@ button.user-dropdown-menu {
   line-height: 60px;
   box-sizing: border-box;
   border-bottom: 1px solid $borderColor;
-  padding-left: 10px;
+  padding-left: 136px;
 
   .ant-menu {
     line-height: 58px;
@@ -49,6 +50,16 @@ button.user-dropdown-menu {
   }
 }
 
+.other-header {
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $borderColor;
+  padding-left: 16px;
+}
+
 .content {
   position: absolute;
   top: 0;
@@ -58,34 +69,18 @@ button.user-dropdown-menu {
   margin-top: 60px;
   background: #f0f0f2;
   overflow: auto;
-  padding: 20px;
-
-  .form-wrapper {
-    background: #fff;
-    border: 1px solid #d2d2d2;
-    padding: 10px;
-
-    h3 {
-      font-weight: normal;
-      line-height: 2;
-      border-bottom: 1px solid $borderColor;
-      margin-bottom: 10px;
-    }
-
-    .item-has-modified {
-        color: #ff9800;
-    }
-
-    .basic-info-nonedit{
-      .ant-form-item-label{
-        min-width: 95px;
-      }
-    }
-  }
-
-  .form-btn-bar {
-    margin-top: 10px;
-  }
+  padding: 16px;
+}
+.other-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 120px;
+  margin-top: 60px;
+  background: #f0f0f2;
+  overflow: auto;
+  padding: 16px;
 }
 
 .fa {
