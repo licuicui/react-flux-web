@@ -8,43 +8,25 @@ body,html{
 #app {
   font-size: 14px;
   color: #333;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 :focus {
   outline: 0;
 }
-.home-title {
-  font-size: 16px;
-  color: #333;
-}
 
-/* home large icon */
-.statistical-large-icon {
-  width: 236px;
-  height: 206px;
-  border-radius: 4px;
-  border: 1px solid red;
+.clearfix {
+  zoom: 1;
 
-  .icon-top {
-    font-size: 16px;
-    background-color: #47b8e0;
-    height: 156px;
-    color: #fff;
-    padding: 10px;
-    position: relative;
+  &::after,
+  &::before {
+    content: " ";
+      display: table;
+  }
 
-    .title {
-      display: block;
-    }
-
-    .number {
-      width: 100%;
-      text-align: center;
-    }
+  &:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
   }
 }

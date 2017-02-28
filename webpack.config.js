@@ -57,7 +57,6 @@ module.exports = {
             Util: __dirname + '/util',
             Public: __dirname + '/src/public',
             SysConfig: __dirname + '/sysConfig',
-            Plugin: __dirname + '/plugin',
             Actions: __dirname + '/src/actions',
             Components: __dirname + '/src/components',
             Dispatcher: __dirname + '/src/dispatcher',
