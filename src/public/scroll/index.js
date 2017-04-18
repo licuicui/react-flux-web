@@ -1,21 +1,9 @@
 /* Libs */
 import React, { Component } from 'react'
-import _ from 'lodash';
-
-const dataList = []
-const creatData = (start, end) => {
-  for (let i = start; i <= end ; i++ ) {
-    dataList.push({
-      title: `标题${i}`,
-      text: `测试数据${i}`
-    })
-  }
-}
 
 class Scroll extends Component {
   constructor(props) {
     super(props);
-    creatData(1, 10);
     this.state = {};
   }
 

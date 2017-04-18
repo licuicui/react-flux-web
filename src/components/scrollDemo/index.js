@@ -17,6 +17,12 @@ const creatData = (start, end) => {
 class ScrollDemo extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      dataList: []
+    };
+  }
+
+  componentWillMount() {
     creatData(1, 10);
     this.state = {
       dataList: dataList
@@ -25,6 +31,7 @@ class ScrollDemo extends Component {
 
   handleScroll = () => {
     creatData(11, 15);
+    console.log('sas')
     this.setState({
       dataList: dataList
     });

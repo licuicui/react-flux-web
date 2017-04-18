@@ -1,7 +1,6 @@
 /* Libs */
 import React from 'react'
 import { Router, Route, IndexRoute, IndexRedirect, hashHistory } from 'react-router'
-import 'Plugin/jquery.base64.min.js'
 /* login */
 import Login from 'Components/login'
 
